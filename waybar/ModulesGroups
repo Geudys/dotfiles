@@ -25,7 +25,6 @@
 	"orientation": "horizontal",
 	"modules": [
 		"cpu",
-		"power-profiles-daemon",
 		"memory",
 		"temperature",
 		"disk",
@@ -50,7 +49,6 @@
 "group/laptop": {
 	"orientation": "inherit",
 	"modules": [
-		"backlight",
 		"battery",
 	]
 },

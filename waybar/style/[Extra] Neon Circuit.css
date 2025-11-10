@@ -182,8 +182,6 @@ tooltip {
 #clock {
     color: #C792EA;
     border-radius: 20px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
     margin-right: 0px;
     padding-right: 12px;
 }
@@ -192,8 +190,6 @@ tooltip {
 #idle_inhibitor {
     color: #89DDFF;
     border-radius: 20px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
     margin-right: 5px;
     padding-left: 12px;
 }
@@ -206,8 +202,6 @@ tooltip {
 #temperature {
     color: #82AAFF;
     border-radius: 20px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
     margin-left: 5px;
     margin-right: 0px;
     padding-right: 12px;
@@ -220,19 +214,18 @@ tooltip {
 /* ---------- CPU/DISK/MEMORY - MÓDULOS INTERMEDIOS ---------- */
 #cpu,
 #disk,
+#temperature,
 #memory {
     color: #D6DEEB;
-    border-radius: 0px;
-    margin-right: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
+    border-radius: 20px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 12px;
 }
 
 /* ---------- NETWORK - FIN DE GRUPO (SEMICÍRCULO DERECHO) ---------- */
 #network {
     border-radius: 20px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
     margin-right: 5px;
     padding-left: 12px;
 }
@@ -242,10 +235,8 @@ tooltip {
     color: #82AAFF;
     font-size: 16px;
     border-radius: 20px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
     margin-left: 5px;
-    margin-right: 0px;
+    margin-right: 5px;
     padding-left: 12px;
     padding-right: 12px;
 }
@@ -255,10 +246,8 @@ tooltip {
 #custom-weather {
     color: #82AAFF;
     border-radius: 20px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
     margin-right: 5px;
-    padding-left: 12px;
+    padding-left: 5px;
 }
 
 /* ---------- BATTERY ---------- */
