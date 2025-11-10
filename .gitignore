@@ -1,0 +1,25 @@
+# Ignorar todo
+*
+
+# Pero no ignores el propio .gitignore
+!.gitignore
+
+# carpetas incluidas
+!tmux/
+!tmux/**
+
+!fish/
+!fish/**
+
+!hypr/
+!hypr/**
+
+!kitty/
+!kitty/**
+
+!lazygit/
+!lazygit/**
+
+!waybar/
+!waybar/**
+
