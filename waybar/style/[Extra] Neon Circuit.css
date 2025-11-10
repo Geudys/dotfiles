@@ -1,0 +1,292 @@
+/* ----------- 💫 Night Owl - Waybar -------- */
+@define-color bar-bg rgba(0, 0, 0, 0);
+@define-color main-bg #011627;
+@define-color main-fg #D6DEEB;
+@define-color wb-act-bg #82AAFF;
+@define-color wb-act-fg #011627;
+@define-color wb-hvr-bg #C792EA;
+@define-color wb-hvr-fg #011627;
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "Iosevka Nerd Font";
+    font-weight: bold;
+    min-height: 0;
+    font-size: 100%;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+window#waybar {
+    background: @bar-bg;
+}
+
+tooltip {
+    background: @main-bg;
+    color: @main-fg;
+    border-radius: 12px;
+    border-width: 0px;
+}
+
+#taskbar button,
+#workspaces button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 2px;
+    border-width: 2px;
+    border-radius: 10px;
+    margin: 2px 0;
+    padding-left: 6px;
+    padding-right: 0px;
+    color: @wb-act-fg;
+    background-color: @wb-act-bg;
+    animation: ws_normal 2s ease-in-out 1;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+    background-image: linear-gradient(45deg, #82AAFF 50%, #C792EA 50%);
+    color: @wb-act-fg;
+    border-radius: 12px;
+    margin: 0 4px;
+    padding: 0 12px;
+    animation: ws_active 2s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-fg;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#tray menu * {
+    min-height: 18px;
+}
+
+#tray menu separator {
+    min-height: 16px;
+}
+
+/* ---------- ESTILOS BASE ---------- */
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar button,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+    color: @main-fg;
+    background: @main-bg;
+    opacity: 1;
+    margin: 3px 0;
+    padding: 0 8px;
+}
+
+/* ---------- WORKSPACES CON SEMICÍRCULOS ---------- */
+#workspaces {
+    border-radius: 20px;
+    padding: 0 8px;
+    margin-right: 5px;
+    background: #011627;
+    color: #D6DEEB;
+}
+
+#workspaces button {
+    background: #011627;
+    color: #D6DEEB;
+}
+
+#workspaces button.active {
+    background: #82AAFF;
+    color: #011627;
+}
+
+#workspaces button:hover {
+    background: #C792EA;
+    color: #011627;
+}
+
+/* ---------- TASKBAR ---------- */
+#taskbar {
+    padding: 0px;
+    color: #82AAFF;
+}
+
+/* ---------- WINDOW CON SEMICÍRCULOS ---------- */
+#window {
+    background: #011627;
+    color: #D6DEEB;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+#window.active {
+    background: linear-gradient(45deg, #82AAFF 50%, #C792EA 50%);
+    color: #011627;
+}
+
+/* ---------- CLOCK - INICIO DE GRUPO (SEMICÍRCULO IZQUIERDO) ---------- */
+#clock {
+    color: #C792EA;
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-right: 0px;
+    padding-right: 12px;
+}
+
+/* ---------- IDLE INHIBITOR - FIN DE GRUPO (SEMICÍRCULO DERECHO) ---------- */
+#idle_inhibitor {
+    color: #89DDFF;
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-right: 5px;
+    padding-left: 12px;
+}
+
+#idle_inhibitor.activated {
+    color: #39FF14;
+}
+
+/* ---------- TEMPERATURE - INICIO DE GRUPO (SEMICÍRCULO IZQUIERDO) ---------- */
+#temperature {
+    color: #82AAFF;
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-left: 5px;
+    margin-right: 0px;
+    padding-right: 12px;
+}
+
+#temperature.critical {
+    background-color: #FF5370;
+}
+
+/* ---------- CPU/DISK/MEMORY - MÓDULOS INTERMEDIOS ---------- */
+#cpu,
+#disk,
+#memory {
+    color: #D6DEEB;
+    border-radius: 0px;
+    margin-right: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* ---------- NETWORK - FIN DE GRUPO (SEMICÍRCULO DERECHO) ---------- */
+#network {
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-right: 5px;
+    padding-left: 12px;
+}
+
+/* ---------- TRAY - INICIO DE GRUPO (SEMICÍRCULO IZQUIERDO) ---------- */
+#tray {
+    color: #82AAFF;
+    font-size: 16px;
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-left: 5px;
+    margin-right: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* ---------- CUSTOM POWER/WEATHER - FIN DE GRUPO (SEMICÍRCULO DERECHO) ---------- */
+#custom-power,
+#custom-weather {
+    color: #82AAFF;
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-right: 5px;
+    padding-left: 12px;
+}
+
+/* ---------- BATTERY ---------- */
+#battery {
+    color: #ADDB67;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+#battery.charging {
+    color: #39FF14;
+}
+
+#battery.warning:not(.charging) {
+    color: #FFCB6B;
+}
+
+#battery.critical:not(.charging) {
+    color: #FF5370;
+}
+
+/* ---------- PULSEAUDIO ---------- */
+#pulseaudio {
+    color: #C792EA;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+#pulseaudio.muted {
+    color: #637777;
+}
