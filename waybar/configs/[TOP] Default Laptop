@@ -19,7 +19,6 @@
   "margin-right": 8,
 
   "modules-left": [
-    "hyprland/window",
     "hyprland/workspaces#rw",
   ],
 
@@ -28,7 +27,6 @@
   ],
 
   "modules-right": [
-    "group/motherboard",
     "tray",
     "group/laptop",
     "group/audio",
