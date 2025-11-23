@@ -2,7 +2,7 @@
 @define-color bar-bg rgba(0, 0, 0, 0);
 @define-color main-bg #011627;
 @define-color main-fg #D6DEEB;
-@define-color wb-act-bg #82AAFF;
+@define-color wb-act-bg #7FDBCA; /* Color nuevo para workspace activo */
 @define-color wb-act-fg #011627;
 @define-color wb-hvr-bg #C792EA;
 @define-color wb-hvr-fg #011627;
@@ -28,6 +28,7 @@ tooltip {
     border-width: 0px;
 }
 
+/* ---------- TASKBAR + WORKSPACES BASE ---------- */
 #taskbar button,
 #workspaces button {
     box-shadow: none;
@@ -38,14 +39,14 @@ tooltip {
     margin: 2px 0;
     padding-left: 6px;
     padding-right: 0px;
-    color: @wb-act-fg;
-    background-color: @wb-act-bg;
+    color: @main-fg;
+    background-color: @main-bg;
     animation: ws_normal 2s ease-in-out 1;
 }
 
 #taskbar button.active,
 #workspaces button.active {
-    background-image: linear-gradient(45deg, #82aaff 50%, #c792ea 50%);
+    background: @wb-act-bg;
     color: @wb-act-fg;
     border-radius: 12px;
     margin: 0 4px;
@@ -62,6 +63,7 @@ tooltip {
     transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
+/* ---------------------- MENÚ TRAY ---------------------- */
 #tray menu * {
     min-height: 18px;
 }
@@ -150,8 +152,8 @@ tooltip {
 }
 
 #workspaces button.active {
-    background: #82aaff;
-    color: #011627;
+    background: @wb-act-bg; /* color nuevo */
+    color: @wb-act-fg;
 }
 
 #workspaces button:hover {
@@ -178,7 +180,7 @@ tooltip {
     color: #011627;
 }
 
-/* ---------- CLOCK - INICIO DE GRUPO (SEMICÍRCULO IZQUIERDO) ---------- */
+/* ---------- CLOCK ---------- */
 #clock {
     color: #c792ea;
     border-radius: 20px;
@@ -186,7 +188,7 @@ tooltip {
     padding-right: 12px;
 }
 
-/* ---------- IDLE INHIBITOR - FIN DE GRUPO (SEMICÍRCULO DERECHO) ---------- */
+/* ---------- IDLE INHIBITOR ---------- */
 #idle_inhibitor {
     color: #89ddff;
     border-radius: 20px;
@@ -198,7 +200,7 @@ tooltip {
     color: #39ff14;
 }
 
-/* ---------- TEMPERATURE - INICIO DE GRUPO (SEMICÍRCULO IZQUIERDO) ---------- */
+/* ---------- TEMPERATURE ---------- */
 #temperature {
     color: #82aaff;
     border-radius: 20px;
@@ -211,26 +213,26 @@ tooltip {
     background-color: #ff5370;
 }
 
-/* ---------- CPU/DISK/MEMORY - MÓDULOS INTERMEDIOS ---------- */
+/* ---------- CPU/DISK/MEMORY ---------- */
 #cpu,
 #disk,
 #temperature,
 #memory {
-    color: #d6deeb;
+    color: @main-fg;
     border-radius: 20px;
     margin-right: 5px;
     padding-left: 10px;
     padding-right: 12px;
 }
 
-/* ---------- NETWORK - FIN DE GRUPO (SEMICÍRCULO DERECHO) ---------- */
+/* ---------- NETWORK ---------- */
 #network {
     border-radius: 20px;
     margin-right: 5px;
     padding-left: 12px;
 }
 
-/* ---------- TRAY - INICIO DE GRUPO (SEMICÍRCULO IZQUIERDO) ---------- */
+/* ---------- TRAY ---------- */
 #tray {
     color: #82aaff;
     font-size: 16px;
@@ -241,7 +243,7 @@ tooltip {
     padding-right: 12px;
 }
 
-/* ---------- CUSTOM POWER/WEATHER - FIN DE GRUPO (SEMICÍRCULO DERECHO) ---------- */
+/* ---------- POWER + WEATHER ---------- */
 #custom-power,
 #custom-weather {
     color: #82aaff;
