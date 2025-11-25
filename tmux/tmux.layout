@@ -1,0 +1,29 @@
+
+set -g mode-style "fg=#d6deeb,bg=#011627"
+set -g message-style "fg=#d6deeb,bg=default"
+set -g message-command-style "fg=#d6deeb,bg=default"
+
+set -g pane-border-style "fg=#3b3f51"
+set -g pane-active-border-style "fg=#c792ea"
+
+set -g status on
+set -g status-justify absolute-centre
+set -g status-style "fg=#d6deeb,bg=default"
+
+set -g status-left-length 100
+set -g status-right-length 100
+
+set -g status-left "#[fg=#ffeb95,bg=default] #[fg=#011627,bg=#ffeb95,bold] #S #[fg=#ffeb95,bg=default] "
+
+set -g status-right "#[fg=#c792ea,bg=default]#[fg=#011627,bg=#c792ea,bold] #T #[fg=#c792ea,bg=default] "
+
+setw -g window-status-style "fg=#addb67,bg=default"
+
+setw -g window-status-format "#[fg=#676B79] ● "
+
+setw -g window-status-current-format "#[fg=#addb67,bold] ● "
+
+setw -g window-status-current-style "#{?window_zoomed_flag,fg=#ffeb95,fg=#addb67,bold}"
+
+setw -g window-status-bell-style "fg=red,nobold"
+
