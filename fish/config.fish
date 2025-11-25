@@ -50,10 +50,10 @@ function __git_info
 
         set symbols ""
         if not git diff --quiet --ignore-submodules --cached
-            set symbols "$symbols " # staged
+            set symbols "$symbols " # staged
         end
         if not git diff --quiet --ignore-submodules
-            set symbols "$symbols " # unstaged
+            set symbols "$symbols 󰛿" # unstaged
         end
         if git ls-files --others --exclude-standard | grep -q .
             set symbols "$symbols " # untracked
