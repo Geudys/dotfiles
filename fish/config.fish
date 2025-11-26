@@ -135,6 +135,9 @@ alias tk='tmux kill-session -t'
 alias tl='tmux list-sessions'
 alias tn='tmux new -s'
 
+# yazi
+alias y='yazi'
+
 
 # ================================
 #   Rutas adicionales
@@ -151,6 +154,16 @@ end
 if status is-interactive
     and not set -q TMUX
     tmux attach || tmux new
+end
+
+# Sincronizar ruta con yazi
+function y
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
 end
 
 set -gx PATH $PATH ./node_modules/.bin
