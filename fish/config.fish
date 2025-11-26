@@ -66,7 +66,7 @@ end
 function fish_prompt
 
     set_color 89ddff
-    echo -n "  "
+    echo -n "   "
     set_color normal
 
     set_color c792ea
@@ -134,10 +134,6 @@ alias t='tmux attach || tmux new'
 alias tk='tmux kill-session -t'
 alias tl='tmux list-sessions'
 alias tn='tmux new -s'
-
-# yazi
-alias y='yazi'
-
 
 # ================================
 #   Rutas adicionales
