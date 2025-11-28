@@ -38,3 +38,7 @@ if [ ! -f "$HOME/.config/hypr/.initial_startup_done" ]; then
     exit
 fi
 
+swww-daemon --format xrgb &
+sleep 1
+swww img "$HOME/Pictures/wallpapers/zarc-filter-night.png" --transition-type any --transition-fps 60 --transition-duration 2
+
