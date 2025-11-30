@@ -1,0 +1,16 @@
+/* Night Owl Theme — Color Palette */
+
+* {
+    background:        #011627;   /* fondo principal */
+    background-alt:    #1D3B53;   /* fondo de elementos */
+    foreground:        #D6DEEB;   /* texto standard */
+
+    selected:          #82AAFF;   /* selección */
+    active:            #7FDBCA;   /* activo */
+    urgent:            #EF5350;   /* urgente */
+
+    /* Opcionales refinados */
+    background-light:  #0B2942;
+    foreground-dim:    #A2B5C6;
+}
+
