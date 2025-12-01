@@ -1,50 +1,48 @@
  /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  
- /* wallust template - colors-rofi */
+/* wallust template - colors-rofi (Night Owl) */
 
 * {
-active-background: #784CA0;
-active-foreground: #FAE8E1;
-normal-background: #181519;
-normal-foreground: #FAE8E1;
-urgent-background: #CC659A;
-urgent-foreground: #FAE8E1;
+active-background: #7E57C2;
+active-foreground: #C6C9CA;
+normal-background: #011627;
+normal-foreground: #C6C9CA;
+urgent-background: #011627;
+urgent-foreground: #C6C9CA;
 
-alternate-active-background: #914B4B;
-alternate-active-foreground: #FAE8E1;
-alternate-normal-background: #181519;
-alternate-normal-foreground: #FAE8E1;
-alternate-urgent-background: #181519;
-alternate-urgent-foreground: #FAE8E1;
+alternate-active-background: #5C6BC0;
+alternate-active-foreground: #C6C9CA;
+alternate-normal-background: #011627;
+alternate-normal-foreground: #C6C9CA;
+alternate-urgent-background: #011627;
+alternate-urgent-foreground: #C6C9CA;
 
-selected-active-background: #CC659A;
-selected-active-foreground: #FAE8E1;
-selected-normal-background: #CC659A;
-selected-normal-foreground: #FAE8E1;
-selected-urgent-background: #784CA0;
-selected-urgent-foreground: #FAE8E1;
+selected-active-background: #82AAFF;
+selected-active-foreground: #011627;
+selected-normal-background: #82AAFF;
+selected-normal-foreground: #011627;
+selected-urgent-background: #011627;
+selected-urgent-foreground: #C6C9CA;
 
-background-color: #181519;
-background: rgba(0,0,0,0.7);
-foreground: #FAE8E1;
-border-color: #784CA0;
+background-color: #011627;
+background: rgba(1,22,39,0.8);
+foreground: #C6C9CA;
+border-color: #7E57C2;
 
-color0: #3F3C40;
-color1: #1A1022;
-color2: #492E61;
-color3: #6D3838;
-color4: #5A3978;
-color5: #994C74;
-color6: #B58E80;
-color7: #F0D6CC;
-color8: #A8958F;
-color9: #23152D;
-color10: #613D81;
-color11: #914B4B;
-color12: #784CA0;
-color13: #CC659A;
-color14: #F2BDAA;
-color15: #F0D6CC;
-
-
+color0: #011627;   /* fondo principal */
+color1: #011627;   /* rojo para errores/urgente */
+color2: #22DA6E;   /* verde */
+color3: #ffeb95;   /* amarillo / acentos */
+color4: #82AAFF;   /* azul */
+color5: #C792EA;   /* morado / acentos */
+color6: #7FDBCA;   /* cian suave */
+color7: #C6C9CA;   /* gris claro */
+color8: #5C6BC0;   /* azul oscuro */
+color9: #011627;   /* rojo suave */
+color10: #22DA6E;  /* verde suave */
+color11: #ffeb95;  /* amarillo suave */
+color12: #82AAFF;  /* azul claro */
+color13: #C792EA;  /* morado suave */
+color14: #7FDBCA;  /* cian suave */
+color15: #C6C9CA;  /* gris claro */
 }
 
