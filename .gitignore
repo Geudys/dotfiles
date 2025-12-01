@@ -31,3 +31,6 @@
 
 !rofi/
 !rofi/**
+
+!wlogout/
+!wlogout/**
