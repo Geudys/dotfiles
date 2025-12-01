@@ -373,10 +373,6 @@
 	"scroll-step": 5,
 },
 
-"tray": {
-	"icon-size": 20,
-	"spacing": 4,
-},
 
 "wireplumber": {
 	"format": "{icon} {volume} %",
@@ -404,4 +400,31 @@
     "kitty-dropterm"
 		],
 },
+"custom/connection-icon": {
+	"format": "󰇧",
+	"tooltip-format": "Conexiones",
+	"on-click": ""
+},
+
+"network": {
+	"format-wifi": "  {essid} ({signalStrength}%)",
+	"format-ethernet": "󰈀  Conectado",
+	"format-disconnected": "󰖪  Desconectado",
+	"tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+	"tooltip-format-wifi": "{essid} ({signalStrength}%)\n󰈀 {ipaddr}",
+	"on-click": "nm-connection-editor"
+},
+
+"bluetooth": {
+	"format": "  {status}",
+	"format-disabled": "  Desactivado",
+	"format-off": "  Apagado",
+	"format-on": "  Encendido",
+	"format-connected": "  {device_alias}",
+	"format-connected-battery": "  {device_alias} ({device_battery_percentage}%)",
+	"tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} conectados",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"on-click": "blueman-manager"
+}
 }

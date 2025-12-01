@@ -68,13 +68,14 @@
 "group/connections": {
 	"orientation": "inherit",
 	"drawer": {
-		"transition-duration": 500,
-		"children-class": "bluetooth",
-		"transition-left-to-right": true
-        },
+		"transition-duration": 400,
+		"transition-left-to-right": true,
+		"children-class": "connection-drawer"
+	},
 	"modules": [
+		"custom/connection-icon",
 		"network",
-		"bluetooth",
+		"bluetooth"
 	]
 },
 
