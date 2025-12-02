@@ -153,6 +153,9 @@ if status is-interactive
 end
 
 # Sincronizar ruta con yazi
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     yazi $argv --cwd-file="$tmp"

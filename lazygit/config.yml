@@ -31,24 +31,19 @@ gui:
       - "#7FDBCA"
     branchColor:
       - "#82AAFF"
-
   # Estilo de paneles
   border: rounded
   showFileTree: true
   nerdFontsVersion: "3"
   showCommandLog: false
   showBottomLine: true
-
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never
-
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
 customCommands:
   # Ejemplo de comando útil
   - key: "R"
     context: "global"
     command: "git fetch --all --prune && git pull --rebase"
     description: "Actualizar repositorio remoto"
-
-
