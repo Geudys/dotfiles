@@ -11,26 +11,8 @@
 !fish/
 !fish/**
 
-!hypr/
-!hypr/**
-
 !kitty/
 !kitty/**
 
 !lazygit/
 !lazygit/**
-
-!waybar/
-!waybar/**
-
-!wallust/
-!wallust/**
-
-!swaync/
-!swaync/**
-
-!rofi/
-!rofi/**
-
-!wlogout/
-!wlogout/**
