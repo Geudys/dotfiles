@@ -16,3 +16,18 @@
 
 !lazygit/
 !lazygit/**
+
+!waybar/
+!waybar/**
+
+!wallust/
+!wallust/**
+
+!swaync/
+!swaync/**
+
+!rofi/
+!rofi/**
+
+!wlogout/
+!wlogout/**

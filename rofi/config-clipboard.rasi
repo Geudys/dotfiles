@@ -5,8 +5,8 @@
 
 /* ---- Window ---- */
 window {
-  width: inherit;
-  height: inherit;
+  width: 50%;
+  height: 50%;
 }
 
 /* ---- Mainbox ---- */
