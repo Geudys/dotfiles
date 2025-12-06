@@ -11,6 +11,9 @@
 !fish/
 !fish/**
 
+!hypr/
+!hypr/**
+
 !kitty/
 !kitty/**
 
