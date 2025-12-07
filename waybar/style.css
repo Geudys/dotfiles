@@ -1,83 +1,146 @@
-@import "../omarchy/current/theme/waybar.css";
+/* ---------- MARGEN SUPERIOR DEL WAYBAR ---------- */
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+    padding-top: 8px;
+    padding-bottom: 4px;
+    color: #d6deeb;
+}
 
+/* ---------- ESTILOS BASE ---------- */
 * {
-    background-color: @background;
-    color: @foreground;
-
     border: none;
-    border-radius: 0;
-    min-height: 0;
     font-family: 'Iosevka Nerd Font';
-    font-size: 12px;
+    font-weight: bold;
+    min-height: 0;
+    font-size: 20px;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
-.modules-left {
-    margin-left: 8px;
+/* ========================================================================
+   GRUPOS TIPO CÁPSULA (SIN FLEX)
+   Se logran pegando módulos con margin-left negativo y borde redondeado.
+   ======================================================================== */
+
+#workspaces,
+#clock,
+#network,
+#bluetooth,
+#pulseaudio,
+#cpu,
+#battery,
+#tray {
+    background: #011627;
+    color: #d6deeb;
+    border-radius: 999px;
+    padding: 4px 18px;
 }
 
-.modules-right {
-    margin-right: 8px;
+/* Quita separación entre módulos “del grupo” pegándolos */
+#network,
+#bluetooth,
+#pulseaudio,
+#cpu,
+#battery,
+#tray {
+    padding-right: 20px;
+}
+
+/* El primero de RIGHT DEBE TENER BORDE REDONDEADO COMPLETO */
+#network {
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+    margin-left: 6px; /* vuelve a separar del centro */
+    padding-right: 25px;
+}
+
+/* El ÚLTIMO del RIGHT (tray) tiene borde derecho completo */
+#tray {
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+}
+
+/* ========================================================================
+   WORKSPACES
+   ======================================================================== */
+#workspaces {
+    border-radius: 999px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #workspaces button {
-    all: initial;
-    padding: 0 6px;
-    margin: 0 1.5px;
-    min-width: 9px;
+    background: transparent;
+    color: #d6deeb;
+    border-radius: 999px;
+    padding: 2px 10px;
 }
 
-#workspaces button.empty {
-    opacity: 0.5;
+#workspaces button.active {
+    background: #82aaff;
+    color: #011627;
 }
 
-#cpu,
-#battery,
-#pulseaudio,
-#custom-omarchy,
-#custom-screenrecording-indicator,
-#custom-update {
-    min-width: 12px;
-    margin: 0 7.5px;
+#workspaces button:hover {
+    background: #c792ea;
+    color: #011627;
 }
 
-#tray {
-    margin-right: 16px;
-}
+/* ========================================================================
+   ESTILOS DE CADA MÓDULO (COLORES INDIVIDUALES)
+   ======================================================================== */
 
-#bluetooth {
-    margin-right: 17px;
+#clock {
+    color: #c792ea;
 }
 
 #network {
-    margin-right: 13px;
+    color: #ffcb6b;
 }
 
-#custom-expand-icon {
-    margin-right: 18px;
+#bluetooth {
+    color: #82aaff;
+    padding-left: 20px;
 }
 
+#pulseaudio {
+    color: #c792ea;
+    padding-right: 26px;
+}
+
+#pulseaudio.muted {
+    color: #637777;
+}
+
+#cpu {
+    color: #ff5370;
+}
+
+#battery {
+    color: #addb67;
+    padding-left: 22px;
+}
+
+#battery.charging {
+    color: #39ff14;
+}
+
+#battery.warning:not(.charging) {
+    color: #ffcb6b;
+}
+
+#battery.critical:not(.charging) {
+    color: #ff5370;
+}
+
+#tray {
+    color: #82aaff;
+}
+
+/* ========================================================================
+   TOOLTIP
+   ======================================================================== */
 tooltip {
-    padding: 2px;
-}
-
-#custom-update {
-    font-size: 10px;
-}
-
-#clock {
-    margin-left: 8.75px;
-}
-
-.hidden {
-    opacity: 0;
-}
-
-#custom-screenrecording-indicator {
-    min-width: 12px;
-    margin-left: 8.75px;
-    font-size: 10px;
-}
-
-#custom-screenrecording-indicator.active {
-    color: #a55555;
+    background: #011627;
+    color: #d6deeb;
+    border-radius: 8px;
 }
