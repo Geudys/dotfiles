@@ -1,5 +1,3 @@
-
-
 /* ---- Configuration ---- */
 configuration {
     modi:                    "drun,run,filebrowser";
@@ -16,7 +14,7 @@ configuration {
 }
 
 /* ---- Load wallust colors ---- */
-@theme "~/.config/rofi/wallust/colors-rofi.rasi"
+@theme "~/.config/rofi/colors/colors-rofi.rasi"
 
 /* ---- Global Properties ---- */
 * {
