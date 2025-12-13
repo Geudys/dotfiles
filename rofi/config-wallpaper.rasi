@@ -10,6 +10,7 @@ configuration {
 window {
   width: 75%;
   height: inherit;
+  border-radius: 12px;
 }
 
 /* ---- Mainbox ---- */
