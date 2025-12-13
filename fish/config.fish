@@ -89,3 +89,7 @@ end
 if test -d /home/linuxbrew/.linuxbrew/bin
     set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
 end
+
+# Set default
+set -gx EDITOR nvim
+set -gx VISUAL nvim
