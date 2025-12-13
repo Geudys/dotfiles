@@ -1,10 +1,6 @@
-# ~/.config/fish/config.fish
+# Theme
 
-# ================================
-#   Tema tipo Night Owl (mejorado)
-# ================================
-
-# Colores principales
+## colors
 set -g fish_color_normal d6deeb
 set -g fish_color_autosuggestion 7a8181
 set -g fish_color_command 82aaff
@@ -25,21 +21,16 @@ set -g fish_color_end 82aaff
 set -g fish_color_quote ffb86c
 set -g fish_color_cancel -r
 
-# Prompt user/host/status
 set -g fish_color_user 82aaff --bold
 set -g fish_color_host ffd866
 set -g fish_color_status ff5555 --bold
 
-# Colores del sistema de completado
 set -g fish_pager_color_completion d6deeb
 set -g fish_pager_color_description 7a8181
 set -g fish_pager_color_prefix 82aaff --bold
 set -g fish_pager_color_progress white --background=285577
 
-# ================================
-#   Prompt personalizado con Git + Nerd Fonts
-# ================================
-
+# Git
 function __git_info
     if not command -v git >/dev/null
         return
@@ -72,7 +63,6 @@ function fish_prompt
     set_color c792ea
     echo -n (prompt_pwd)
 
-    # Git info
     set gitinfo (__git_info)
     if test -n "$gitinfo "
         set_color ffb86c
@@ -83,105 +73,19 @@ function fish_prompt
     set_color normal
 end
 
-# ================================
-#   Título de ventana
-# ================================
+# Window title
 function fish_title
     echo (status current-command) "  " (prompt_pwd)
 end
 
-# ================================
-#   Mensaje de bienvenida
-# ================================
+# Welcome message
 function fish_greeting
     set_color 82aaff
     echo ""
     set_color 7a8181
 end
 
-# ================================
-#   Aliases útiles
-# ================================
-
-alias ls='ls --color=auto'
-alias ll='ls -alF --color=auto'
-alias la='ls -A --color=auto'
-alias l='ls -CF --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-alias za='eza -a --icons --group-directories-first --color=always'
-alias z='eza --icons --group-directories-first --color=always'
-alias zl='eza -l --icons --group-directories-first --color=always'
-alias zla='eza -la --icons --group-directories-first --color=always'
-alias zt='eza -T --icons --group-directories-first --color=always'
-alias zta='eza -Ta --icons --group-directories-first --color=always'
-alias zlt='eza -lT --icons --group-directories-first --color=always'
-
-# Aliases personalizados
-alias n="nvim"
-alias lg="lazygit"
-alias gs="git status"
-alias gc="git commit -m"
-alias gp="git push"
-alias ga="git add ."
-alias ..="cd .."
-alias ...="cd ../.."
-
-# tmux
-alias t='tmux attach || tmux new'
-alias tk='tmux kill-session -t'
-alias tl='tmux list-sessions'
-alias tn='tmux new -s'
-
-# ================================
-#   Rutas adicionales
-# ================================
+# adicional path
 if test -d /home/linuxbrew/.linuxbrew/bin
     set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
 end
-
-# ================================
-#  Extra 
-# ================================
-
-# Iniciar tmux automáticamente si no está corriendo
-if status is-interactive
-    and not set -q TMUX
-    tmux attach || tmux new
-end
-
-# Sincronizar ruta con yazi
-set -gx EDITOR nvim
-set -gx VISUAL nvim
-
-function y
-    set tmp (mktemp -t "yazi-cwd.XXXXXX")
-    yazi $argv --cwd-file="$tmp"
-    if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        builtin cd -- "$cwd"
-    end
-    rm -f -- "$tmp"
-end
-
-# Sincronizar Superfile
-function s
-    set os $(uname -s)
-
-    if test "$os" = "Linux"
-        set spf_last_dir "$HOME/.local/state/superfile/lastdir"
-    end
-
-    if test "$os" = "Darwin"
-        set spf_last_dir "$HOME/Library/Application Support/superfile/lastdir"
-    end
-
-    command spf $argv
-
-    if test -f "$spf_last_dir"
-        source "$spf_last_dir"
-        rm -f -- "$spf_last_dir" >> /dev/null
-    end
-end
-set -gx PATH $PATH ./node_modules/.bin
