@@ -1,12 +1,10 @@
-/* ---------- MARGEN SUPERIOR DEL WAYBAR ---------- */
+/* ---------- WAYBAR TOP MARGIN ---------- */
 window#waybar {
     background: rgba(0, 0, 0, 0);
-    padding-top: 8px;
-    padding-bottom: 4px;
     color: #d6deeb;
 }
 
-/* ---------- ESTILOS BASE ---------- */
+/* ---------- BASE STYLES ---------- */
 * {
     border: none;
     font-family: 'Iosevka Nerd Font';
@@ -17,8 +15,9 @@ window#waybar {
 }
 
 /* ========================================================================
-   GRUPOS TIPO CÁPSULA (SIN FLEX)
-   Se logran pegando módulos con margin-left negativo y borde redondeado.
+   CAPSULE-LIKE GROUPS (NO FLEX)
+   Achieved by sticking modules together using negative margins
+   and large border-radius values.
    ======================================================================== */
 
 #workspaces,
@@ -35,7 +34,7 @@ window#waybar {
     padding: 4px 18px;
 }
 
-/* Quita separación entre módulos “del grupo” pegándolos */
+/* Remove spacing between grouped modules */
 #network,
 #bluetooth,
 #pulseaudio,
@@ -45,15 +44,15 @@ window#waybar {
     padding-right: 20px;
 }
 
-/* El primero de RIGHT DEBE TENER BORDE REDONDEADO COMPLETO */
+/* The FIRST RIGHT module MUST have full left rounding */
 #network {
     border-top-left-radius: 999px;
     border-bottom-left-radius: 999px;
-    margin-left: 6px; /* vuelve a separar del centro */
+    margin-left: 6px; /* separates it again from the center */
     padding-right: 25px;
 }
 
-/* El ÚLTIMO del RIGHT (tray) tiene borde derecho completo */
+/* The LAST RIGHT module (tray) has full right rounding */
 #tray {
     border-top-right-radius: 999px;
     border-bottom-right-radius: 999px;
@@ -86,7 +85,7 @@ window#waybar {
 }
 
 /* ========================================================================
-   ESTILOS DE CADA MÓDULO (COLORES INDIVIDUALES)
+   INDIVIDUAL MODULE STYLES (COLOR PER MODULE)
    ======================================================================== */
 
 #clock {
