@@ -81,15 +81,5 @@ end
 # Welcome message
 function fish_greeting
     set_color 82aaff
-    echo ""
     set_color 7a8181
 end
-
-# adicional path
-if test -d /home/linuxbrew/.linuxbrew/bin
-    set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
-end
-
-# Set default
-set -gx EDITOR nvim
-set -gx VISUAL nvim
