@@ -1,49 +1,46 @@
 gui:
-  # Tema Night Owl 💫
-  theme:
-    lightTheme: false
-    activeBorderColor:
-      - "#82AAFF" # Azul brillante - selección activa
-      - bold
-    inactiveBorderColor:
-      - "#1D3B53" # Borde inactivo oscuro
-    optionsTextColor:
-      - "#7FDBCA" # Verde-agua
-    selectedLineBgColor:
-      - "#1E2D3D" # Fondo de línea seleccionada
-    selectedRangeBgColor:
-      - "#2C3040" # Fondo rango seleccionado
-    cherryPickedCommitBgColor:
-      - "#C792EA" # Púrpura suave
-    cherryPickedCommitFgColor:
-      - "#011627" # Texto oscuro
-    markedBaseCommitBgColor:
-      - "#EF5350" # Rojo brillante
-    markedBaseCommitFgColor:
-      - "#011627"
-    unstagedChangesColor:
-      - "#EF5350" # Archivos modificados (rojo)
-    defaultFgColor:
-      - "#D6DEEB" # Texto normal
-    searchingActiveBorderColor:
-      - "#C792EA" # Borde de búsqueda activa
-    authorColor:
-      - "#7FDBCA"
-    branchColor:
-      - "#82AAFF"
-  # Estilo de paneles
-  border: rounded
-  showFileTree: true
-  nerdFontsVersion: "3"
-  showCommandLog: false
-  showBottomLine: true
+    theme:
+        lightTheme: false
+        activeBorderColor:
+            - '#82AAFF'
+            - bold
+        inactiveBorderColor:
+            - '#1D3B53'
+        optionsTextColor:
+            - '#7FDBCA'
+        selectedLineBgColor:
+            - '#1E2D3D'
+        selectedRangeBgColor:
+            - '#2C3040'
+        cherryPickedCommitBgColor:
+            - '#C792EA'
+        cherryPickedCommitFgColor:
+            - '#011627'
+        markedBaseCommitBgColor:
+            - '#EF5350'
+        markedBaseCommitFgColor:
+            - '#011627'
+        unstagedChangesColor:
+            - '#EF5350'
+        defaultFgColor:
+            - '#D6DEEB'
+        searchingActiveBorderColor:
+            - '#C792EA'
+        authorColor:
+            - '#7FDBCA'
+        branchColor:
+            - '#82AAFF'
+    border: rounded
+    showFileTree: true
+    nerdFontsVersion: '3'
+    showCommandLog: false
+    showBottomLine: true
 git:
-  pagers:
-    - colorArg: always
-      pager: delta --dark --paging=never
+    pagers:
+        - colorArg: always
+          pager: delta --dark --paging=never
 customCommands:
-  # Ejemplo de comando útil
-  - key: "R"
-    context: "global"
-    command: "git fetch --all --prune && git pull --rebase"
-    description: "Actualizar repositorio remoto"
+    - key: 'R'
+      context: 'global'
+      command: 'git fetch --all --prune && git pull --rebase'
+      description: 'Actualizar repositorio remoto'
