@@ -5,7 +5,6 @@
 /* ---- Window ---- */
 window {
 	width: 40%;
-	//orientation: horizontal;
 	height: inherit;
     y-offset: 10px;
     location: north;
@@ -17,7 +16,7 @@ window {
 /* ---- Entry ---- */ 
 entry {
 	expand: true;
-	placeholder: " 🔎 Google Search";
+	placeholder: " Google Search";
 	horizontal-align: 0.5;
 	padding: 15px;
 	border-radius: inherit;

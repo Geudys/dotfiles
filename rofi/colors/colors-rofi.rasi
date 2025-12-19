@@ -1,5 +1,4 @@
-/* wallust template - colors-rofi (Night Owl) */
-
+// Theme night owl
 * {
 active-background: #7E57C2;
 active-foreground: #C6C9CA;
@@ -27,21 +26,21 @@ background: rgba(1,22,39,0.8);
 foreground: #C6C9CA;
 border-color: #7E57C2;
 
-color0: #011627;   /* fondo principal */
-color1: #011627;   /* rojo para errores/urgente */
-color2: #22DA6E;   /* verde */
-color3: #ffeb95;   /* amarillo / acentos */
-color4: #82AAFF;   /* azul */
-color5: #C792EA;   /* morado / acentos */
-color6: #7FDBCA;   /* cian suave */
-color7: #C6C9CA;   /* gris claro */
-color8: #5C6BC0;   /* azul oscuro */
-color9: #011627;   /* rojo suave */
-color10: #22DA6E;  /* verde suave */
-color11: #ffeb95;  /* amarillo suave */
-color12: #82AAFF;  /* azul claro */
-color13: #C792EA;  /* morado suave */
-color14: #7FDBCA;  /* cian suave */
-color15: #C6C9CA;  /* gris claro */
+color0: #011627;   
+color1: #011627;   
+color2: #22DA6E;   
+color3: #ffeb95;   
+color4: #82AAFF;   
+color5: #C792EA;   
+color6: #7FDBCA;   
+color7: #C6C9CA;   
+color8: #5C6BC0;   
+color9: #011627;   
+color10: #22DA6E;  
+color11: #ffeb95;  
+color12: #82AAFF;  
+color13: #C792EA;  
+color14: #7FDBCA;  
+color15: #C6C9CA;  
 }
 
