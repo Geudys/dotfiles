@@ -18,11 +18,9 @@ set -g status-right "#[fg=#c792ea,bg=default]#[fg=#011627,bg=#c792ea,bold] #T
 
 setw -g window-status-style "fg=#addb67,bg=default"
 
-setw -g window-status-format "#[fg=#676B79,bg=default]#[fg=#011627,bg=#676B79]  #[fg=#676B79,bg=default] "
+setw -g window-status-format "#[fg=#676B79,bg=default]#[fg=#011627,bg=#676B79] #I #[fg=#676B79,bg=default] "
 
-setw -g window-status-current-style "#{?window_zoomed_flag,fg=#ffeb95,bg=default,bold,fg=#addb67,bg=default,bold}"
-
-setw -g window-status-current-format "#[fg=#addb67,bg=default]#[fg=#011627,bg=#addb67,bold]  #[fg=#addb67,bg=default] "
+setw -g window-status-current-format "#[fg=#addb67,bg=default]#[fg=#011627,bg=#addb67,bold] #I #[fg=#addb67,bg=default] "
 
 setw -g window-status-bell-style "fg=red,nobold"
 
