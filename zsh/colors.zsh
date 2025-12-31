@@ -47,3 +47,21 @@ color() {
   print -P "${(P)color}$*${RESET}"
 }
 
+# Syntax Highlighting
+typeset -A ZSH_HIGHLIGHT_STYLES
+
+ZSH_HIGHLIGHT_STYLES[command]='fg=#82aaff'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=#82aaff'
+ZSH_HIGHLIGHT_STYLES[function]='fg=#82aaff'
+
+ZSH_HIGHLIGHT_STYLES[path]='fg=#addb67'
+ZSH_HIGHLIGHT_STYLES[argument]='fg=#d6deeb'
+ZSH_HIGHLIGHT_STYLES[string]='fg=#ecc48d'
+
+ZSH_HIGHLIGHT_STYLES[option]='fg=#c792ea'
+ZSH_HIGHLIGHT_STYLES[variable]='fg=#f78c6c'
+
+ZSH_HIGHLIGHT_STYLES[comment]='fg=#637777'
+ZSH_HIGHLIGHT_STYLES[redirection]='fg=#c792ea'
+
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#ef5350,bold'
