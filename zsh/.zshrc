@@ -31,6 +31,9 @@ source "$ZDOTDIR/colors.zsh"
 source "$ZDOTDIR/layout.zsh"
 source "$ZDOTDIR/functions.zsh"
 
+# fzf-tab 
+source "$ZDOTDIR/plugins/fzf-tab/fzf-tab.plugin.zsh"
+
 # Autosuggestions 
 source "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
