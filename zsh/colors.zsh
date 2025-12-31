@@ -55,6 +55,7 @@ ZSH_HIGHLIGHT_STYLES[builtin]='fg=#82aaff'
 ZSH_HIGHLIGHT_STYLES[function]='fg=#82aaff'
 
 ZSH_HIGHLIGHT_STYLES[path]='fg=#addb67'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#c792ea'
 ZSH_HIGHLIGHT_STYLES[argument]='fg=#d6deeb'
 ZSH_HIGHLIGHT_STYLES[string]='fg=#ecc48d'
 
